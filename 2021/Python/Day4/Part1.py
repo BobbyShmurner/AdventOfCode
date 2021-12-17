@@ -8,7 +8,6 @@ class Board:
 	def __init__(self, numbers):
 		self.m_Numbers = []
 		self.m_NumbersCalled = []
-		self.m_HasBingoed = False
 
 		for row in numbers:
 			self.m_Numbers.append(row.rstrip('\n').split(' '))
@@ -48,7 +47,8 @@ class Board:
 		if isBingo:
 			print(f"Bingo! \nSum: {self.GetSumOfUncalledNumbers()}, Last Num: {self.m_LastNumberCalled}, Answer: {self.GetSumOfUncalledNumbers() * int(self.m_LastNumberCalled)}")
 
-			self.m_HasBingoed = True
+			# Yes i am just crashing the program when there's a bingo, whatcha gonna do about it?
+			raise Exception("Bingo!")
 			
 
 	def IsBingo(self):
@@ -62,8 +62,6 @@ class Board:
 
 
 	def NumberCalled(self, num):
-		if (self.m_HasBingoed): return
-
 		for x in range(len(self.m_Numbers)):
 			if num in self.m_Numbers[x]:
 				y = self.m_Numbers[x].index(num)
