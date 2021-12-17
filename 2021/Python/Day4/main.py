@@ -46,7 +46,7 @@ class Board:
 				break
 
 		if isBingo:
-			print(f"BANGOOOOOOO YESSRIIRIRIR\nSum: {self.GetSumOfUncalledNumbers()}, Last Num: {self.m_LastNumberCalled}, Answer: {self.GetSumOfUncalledNumbers() * int(self.m_LastNumberCalled)}")
+			print(f"Bingo! \nSum: {self.GetSumOfUncalledNumbers()}, Last Num: {self.m_LastNumberCalled}, Answer: {self.GetSumOfUncalledNumbers() * int(self.m_LastNumberCalled)}")
 
 			self.m_HasBingoed = True
 			
