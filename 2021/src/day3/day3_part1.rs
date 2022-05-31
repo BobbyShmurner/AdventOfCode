@@ -31,5 +31,5 @@ pub fn run() {
 	let gamma = i32::from_str_radix(gamma.as_str(), 2).unwrap();
 	let epsilon = gamma ^ (2i32.pow(bit_count as u32) - 1);
 
-	println!("Gamma: {}, Epsilon: {}, Answer: {}", gamma, epsilon, gamma * epsilon);
+	println!("Gamma: {0} ({0:b}), Epsilon: {1} ({1:b}), Answer: {2}", gamma, epsilon, gamma * epsilon);
 }
